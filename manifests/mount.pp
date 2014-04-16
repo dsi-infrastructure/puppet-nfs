@@ -12,7 +12,7 @@ define nfs::mount ($where) {
         #device  => "nas.$domain:/volume1/bacula",
         device   => $where,
         fstype   => 'nfs',
-        ensure   => mounted,
+        #ensure   => mounted,
         options  => 'rw,rsize=8192,wsize=8192,timeo=14,intr',
         atboot   => true,
         require  => File[$name],
